@@ -1,4 +1,7 @@
+(function (){
+
 "use strict"
+
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee col-6 d-flex align-items-baseline">';
@@ -66,7 +69,7 @@ function findCoffee(e) {
         tbody.innerHTML = renderCoffees(coffees);
     } else {
         coffees.forEach(function (coffee) {
-            if (coffee.name.toLowerCase().includes(selectedCoffee)) {
+            if (coffee.name.toLowerCase().includes(selectedCoffee.toLowerCase())) {
                 filteredCoffees.push(coffee);
             }
         });
@@ -145,6 +148,8 @@ function submitCoffeeInfo(e) {
     tbody.innerHTML = renderCoffees(coffees);
 };
 
+
+})();
 
 
 
