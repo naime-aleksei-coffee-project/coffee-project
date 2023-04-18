@@ -69,7 +69,7 @@ function findCoffee(e) {
         tbody.innerHTML = renderCoffees(coffees);
     } else {
         coffees.forEach(function (coffee) {
-            if (coffee.name.toLowerCase().includes(selectedCoffee)) {
+            if (coffee.name.toLowerCase().includes(selectedCoffee.toLowerCase())) {
                 filteredCoffees.push(coffee);
             }
         });
